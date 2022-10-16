@@ -1,5 +1,5 @@
 {
-  "name": "cypress_jenkin",
+  "name": "cypressproject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,13 +7,13 @@
     "cleanup": "rm -fr cypress/reports",
     "merge_reports": "mochawesome-merge cypress/reports/mochawesome-report/*.json > output.json",
     "mochawesome_report": "marge --reportDir cypress/reports/mochawesome-html-report -t Cypress_Test_Report -p Cypress_HMTL_Report -f Cypress_HMTL_Report --charts true output.json",
-    "cy_dashboard": "cypress run --record --key 24e4448f-cd0d-4425-ae01-7d8ae3e96955",
+    "cy_dashboard": "npx cypress run --record --key 14693293-4bc6-49a9-87ff-85f895de3669",
     "cy:report": "npm run cleanup && npm run cy_dashboard && npm run cy:report"
   },
   "author": "Kailash",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.5.0",
+    "cypress": "^10.10.0",
     "mocha": "^8.2.1",
     "mochawesome": "^6.2.1",
     "mochawesome-merge": "^4.2.0",
