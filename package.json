@@ -1,15 +1,22 @@
 {
-  "name": "cypressproject",
+  "name": "cypress-e2e-framework",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cleanup": "rm -fr cypress/reports",
-    "merge_reports": "mochawesome-merge cypress/reports/mochawesome-report/*.json > output.json",
-    "mochawesome_report": "marge --reportDir cypress/reports/mochawesome-html-report -t Cypress_Test_Report -p Cypress_HMTL_Report -f Cypress_HMTL_Report --charts true output.json",
-    "cy_dashboard": "npx cypress run --record --key 14693293-4bc6-49a9-87ff-85f895de3669",
-    "cy:report": "npm run cleanup && npm run cy_dashboard && npm run merge_reports && npm run mochawesome_report"
+    "test": "test",
+    "cypress:open": "cypress open --browser chrome --e2e",
+    "cypress:runDefault": "cypress run --spec cypress/integration/pom/*.spec.js",
+    "cypress:chrome": "cypress run --browser chrome --spec cypress/integration/pom/*.spec.js",
+    "cypress:edge": "cypress run --browser edge --spec cypress/integration/pom/*.spec.js",
+    "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/integration/pom/*.spec.js --record --key 4bc50df7-5eee-4147-8eb3-ccea611c8d4b"
   },
+  "keywords": [
+    "e2e",
+    "automation",
+    "framework",
+    "cypress"
+  ],
   "author": "Kailash",
   "license": "ISC",
   "devDependencies": {
